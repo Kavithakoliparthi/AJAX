@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div id="demo">
+        <h4>Let AJAX change this text.</h4>
+
+    <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    <script>
+        function loadDoc()
+        {
+            var v;
+            if (window.XMLHttpRequest)
+            {
+                v = new XMLHttpRequest();
+            }
+            else
+            {
+                v = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            v.onreadystatechange = function ()
+            {
+                if (this.readyState == 4 && this.status == 200)
+                {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            v.open("GET", "Info.txt", true);
+            v.send();
+        }
+    </script>
+</body>
+</html>

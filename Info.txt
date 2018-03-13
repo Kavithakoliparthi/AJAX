@@ -1,0 +1,7 @@
+﻿AJAX stands for Asynchronous JavaScript and XML <br/>
+
+AJAX is a not a programming language. It is a combination of web technologies <br/>
+
+AJAX is a method of exchanging the data with a server.  <br/>
+
+and it is possible to update the parts of the web page with out reloading the entire web page.
