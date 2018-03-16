@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("#btn1").click(function ()
+            {
+                $("#test1").text(function (i, origText)
+                {
+                    return "Old text: " + origText + " New text: Hello world! (index: " + i + ")";
+                });
+            });
+            $("#btn2").click(function ()
+            {
+                $("#test2").html(function (i, origText)
+                {
+                    return "Old html: " + origText + " New html: Callback <b>Function</b> (index: " + i + ")";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        The callback function has two parameters: 
+        the index of the current element in the list of elements selected and the original (old) value. 
+    </p>
+    <p id="test1">This is a <b>bold</b> paragraph.</p>
+    <p id="test2">This is another <b>bold</b> paragraph.</p>
+
+
+    <button id="btn1">Show old/new Text</button>
+    <button id="btn2">Show old/new HTML</button>
+    <br />
+    <br />
+
+</body>
+</html>

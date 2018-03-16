@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("button").click(function ()
+            {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(1000);
+            });
+         });
+    </script>
+</head>
+<body>
+
+    <p>The jQuery fadeIn() method is used to fade in a hidden element.</p>
+
+    <button>Click to fade in boxes</button><br><br>
+ 
+    <div id="div1" style="width:100px;height:80px;display:none;background-color:orangered;"></div><br>
+    <div id="div2" style="width:100px;height:80px;display:none;background-color:springgreen;"></div><br>
+    <div id="div3" style="width:100px;height:80px;display:none;background-color:deeppink;"></div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("#div1").click(function ()
+            {
+                $("#div2").slideUp("fast");
+            });
+        });
+    </script>
+
+    <style>
+        #div1, #div2 
+        {
+            padding: 5px;
+            text-align: center;
+            background-color:burlywood;
+            border: solid 3px aqua;
+        }
+
+        #div2 
+        {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">Click to slide up panel</div>
+    <div id="div2">Hello world!</div>
+
+</body>
+</html>

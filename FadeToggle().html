@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+   <script>
+       $(document).ready(function ()
+       {
+           $("button").click(function ()
+           {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("fast");
+                $("#div3").fadeToggle(3000);
+            });
+    });
+    </script>
+</head>
+<body>
+    <button>Toggle</button>
+    <p>This is method is toggles between fadeIn() and fadeOut().</p>
+    <div id="div1" style="width:100px;height:80px;background-color:chartreuse;"></div> <br/>
+    <div id="div2" style="width:100px;height:80px;background-color:darkorange;"></div> <br/>
+    <div id="div3" style="width:100px;height:80px;background-color:greenyellow;"></div> <br/>
+</body>
+</html>

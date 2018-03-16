@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("input").focus(function ()
+            {
+                $(this).css("background-color", "aqua");
+            });
+            $("input").blur(function ()
+            {
+                $(this).css("background-color", "deeppink");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>focus() executed when form field gets the focus</p>
+    <p>blur() executed when form field losses the focus</p>
+    First Name: <input type="text" name="firstname">
+    <br/>
+    Last Name: <input type="text" name="lastname">
+</body>
+</html>

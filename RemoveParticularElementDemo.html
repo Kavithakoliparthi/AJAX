@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>     
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("button").click(function ()
+            {
+                $("p").remove(".test");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Remove() accepts one parameter throught that we can remove particular element</p>
+
+    <p class="test">This is another paragraph.</p>
+    <h3 class="test">This is heading</h3>
+    <button>Remove all p elements with class="test"</button>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
+        $(function () {
+            $(".numeric").bind("keypress", function (e)
+            {
+                var keyCode = e.which ? e.which : e.keyCode
+                var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+                $(".error").css("display", ret ? "none" : "");
+                return ret;
+            });
+       });
+    </script>
+    <style type="text/css">
+        body {
+            font-size: 20pt;
+           }
+    </style>
+
+</head>
+<body>
+    
+    Enter a  Value: <input type="text" id="text1" class="numeric" />
+    <span class="error" style="color:blue; display: none">* Input digits (0 - 9)</span>
+</body>
+</html>

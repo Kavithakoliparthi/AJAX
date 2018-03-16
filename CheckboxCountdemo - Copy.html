@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $('input[name=skills]').click(function () {
+                getCheckedCheckBoxes('skills');
+            });
+            $('input[name=cities]').click(function () {
+                getCheckedCheckBoxes('cities');
+            });
+            var getCheckedCheckBoxes = function (groupName)
+            {
+               var result = $('input[name="' + groupName + '"]:checked');
+                if(result.length > 0)
+                {
+                    var resultString = result.length + " checkboxe(s) checked<br/>";
+                    result.each(function () {
+                        resultString += $(this).val() + "<br/>";
+                    });
+                    $('#div'+groupName).html(resultString);
+                }
+                else
+                {
+                    $('#div'+groupName).html("No checkbox selected");
+                }
+             };
+        });
+    </script>
+</head>
+<body>
+
+    Skills:
+    <input type="checkbox" name="skills" value="Javascript" />JavScript
+    <input type="checkbox" name="skills" value="JQuery" />JQuery
+    <input type="checkbox" name="skills" value="AJAX" />AJAX
+    <input type="checkbox" name="skills" value="CSharp" />CSharp
+    <input type="checkbox" name="skills" value="RXJS" />RXJS
+    <br /><br />
+    Preferred Cities:
+    <input type="checkbox" name="cities" value="Bengalaru" />Bengaluru
+    <input type="checkbox" name="cities" value="New York" />New York
+    <input type="checkbox" name="cities" value="London" />London
+    <input type="checkbox" name="cities" value="New Delhi" />New Delhi
+    
+    <div id="divskills"></div>
+    <br />
+    <div id="divcities"></div>
+</body>
+</html>

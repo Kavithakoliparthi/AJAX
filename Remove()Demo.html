@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("button").click(function ()
+            {
+                $("#div1").remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>This method removes the selected element and its child elements</p>
+    <div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:lightgreen;">
+        <p>This is a paragraph in the div.</p>
+        <h3>This is Remove()</h3>
+    </div>
+    <br>
+    <button>Remove div element</button>
+
+</body>
+</html>

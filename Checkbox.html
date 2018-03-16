@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $("#btnsubmit").click(function ()
+            {
+                var result = $('input[type="checkbox"]:checked');
+                if(result.length > 0)
+                {
+                    var resultString = result.length + " checkboxes checked<br/>";
+                    result.each(function () {
+                        resultString += $(this).val() + "<br/>";
+                    });
+                    $('#divResult').html(resultString);
+                }
+                else
+                {
+                    $('#divResult').html("No checkbox selected");
+                }
+             });
+        });
+</script>
+</head>
+<body>
+    
+    Skills:
+    <input type="checkbox" name="skills"  value="Javascript" />JavScript
+    <input type="checkbox" name="skills"  value="JQuery" />JQuery
+    <input type="checkbox" name="skills" value="AJAX" />AJAX
+    <input type="checkbox" name="skills" value="CSharp" />CSharp
+    <input type="checkbox" name="skills" value="RXJS" />RXJS
+    <br /><br />
+    <input id="btnsubmit" type="submit" value="submit" />
+    <br />
+    <br />
+    <div id="divResult"></div>
+</body>
+</html>

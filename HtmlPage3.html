@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+        $(function ()
+        {
+            $('#text1').keypress(function (e)
+            {
+                var txt = String.fromCharCode(e.which);
+                console.log(txt + ' : ' + e.which);
+                if (!txt.match(/[A-Za-z0-9]/))//+#-.
+                {
+                    return false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    Name: <input type="text" id="text1" name="user"><br>
+
+</body>
+</html>

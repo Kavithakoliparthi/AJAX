@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("button").click(function ()
+            {
+                $("div").animate(
+                    {
+                        height: 'toggle'    //3 predefined values show,hide,toggle
+                    });
+            });
+});
+    </script>
+</head>
+<body>
+
+    <p>Click the button multiple times to toggle the animation.</p>
+
+    <button>Start Animation</button>
+
+    <div style="background:deeppink;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
+​

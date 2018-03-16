@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("button").click(function ()
+            {
+                $("p").remove(".test, .demo");
+            });
+        });
+    </script>
+    <style>
+        .test {
+            color:dodgerblue;
+            font-size: 20px;
+        }
+
+        .demo {
+            color:aquamarine;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <p>remove() contains one parameter which allowa you to filter the elements to be removed</p>
+    <p>This is a paragraph.</p>
+    <p class="test">This is p element with class="test".</p>
+    <p class="test">This is p element with class="test".</p>
+    <p class="demo">This is p element with class="demo".</p>
+
+    <button>Remove all p elements with class="test" and class="demo"</button>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("button").click(function ()
+            {
+                $("#p1").css("color", "deeppink").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <p id="p1">jQuery Method Chaning</p>
+    <p>Method chaning allows us to run multiple jquery methods with in single statement one after another</p>
+    <button>Click me</button>
+
+</body>
+</html>

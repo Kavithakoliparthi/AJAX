@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $('#btnGetSelectSkills').click(function () {
+                getCheckedCheckBoxes();
+                
+            });
+            $('#btnGetSelectCities').click(function () {
+               getCheckedCheckBoxes();
+
+            }); 
+            var getCheckedCheckBoxes = function () 
+
+            {
+                var result = $('input[type="checkbox"]:checked');
+
+                if(result.length > 0)
+                {
+                    var resultString = result.length + " checkboxe(s) checked<br/>";
+                    result.each(function () {
+                        resultString += $(this).val() + "<br/>";
+                    });
+                    $('#divResult').html(resultString);
+
+                }
+                else
+                {
+                    $('#divResult').html("No checkbox selected");
+
+                }
+             };
+        });
+    </script>
+</head>
+<body>
+
+    Skills:
+    <input type="checkbox" name="skills" value="Javascript" />JavScript
+    <input type="checkbox" name="skills" value="JQuery" />JQuery
+    <input type="checkbox" name="skills" value="AJAX" />AJAX
+    <input type="checkbox" name="skills" value="CSharp" />CSharp
+    <input type="checkbox" name="skills" value="RXJS" />RXJS
+    <br /><br />
+    Preferred Cities:
+    <input type="checkbox" name="cities" value="Bengalaru" />Bengaluru
+    <input type="checkbox" name="cities" value="New York" />New York
+    <input type="checkbox" name="cities" value="London" />London
+    <input type="checkbox" name="cities" value="New Delhi" />New Delhi
+    <br />
+    <br />
+    <input id="btnGetSelectSkills" type="submit" value="Get Selected Skills" />
+    <input id="btnGetSelectCities" type="submit" value="Get Selected Cities" />
+    <br />
+    <br />
+    <div id="divResult"></div>
+
+</body>
+</html>

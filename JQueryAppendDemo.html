@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        function appendText()
+        {
+            // Create text with HTML
+            var txt1 = "<p>Dotnet.</p>";
+            // Create text with jQuery
+            var txt2 = $("<p></p>").text("Dotnet");
+            // Create text with DOM
+            var txt3 = document.createElement("p");
+            txt3.innerHTML = "Language.";
+            // Append new elements
+            $("body").append(txt1, txt2, txt3);   
+        }
+    </script>
+</head>
+<body>
+    <p>This is craeted by HTML, DOM, JQuery.</p>
+    <button onclick="appendText()">Append text</button>
+</body>
+</html>

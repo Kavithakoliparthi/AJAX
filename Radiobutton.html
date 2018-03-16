@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <!--<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>-->
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $("#btnsubmit").click(function ()
+            {
+                var result = $('input[type="radio"]:checked');
+                if(result.length > 0)
+                {
+                    $('#divResult').html(result.val() + " buttion is checked");
+                }
+                else
+                {
+                    $('#divResult').html("No radio button is checked");
+                }
+             });
+        });
+    </script>
+</head>
+<body>
+    <input type="radio" name="gender" value="Male" />Male
+    <input type="radio" name="gender" value="Female" />Female
+    <br />
+    <br />
+    <input id="btnsubmit" type="submit" value="submit" />
+    <br />
+    <br />
+    <div id="divResult"></div>
+</body>
+</html>

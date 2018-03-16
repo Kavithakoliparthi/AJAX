@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div[title]').filter(function () {
+                return $(this).attr('title').toLowerCase() == "DIVTITLE";
+            }).css('border', '3px solid red');
+        });
+    </script>
+</head>
+<body>
+    <div title="divtitle">
+        DIV 1
+    </div>
+    <br />
+    <br />
+    <div title="DIVTITLE">
+        DIV 2
+    </div>
+    <br />
+    <div title="DivTitle">
+        DIV 3
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("button").click(function ()
+            {
+                $("p").hide(2000);
+                alert("The paragraph is now hidden");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <button>Hide</button>
+    <p>This is a paragraph with little content.</p>
+    <p>callback function is not executed</p>
+</body>
+</html>
